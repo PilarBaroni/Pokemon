@@ -15,7 +15,7 @@ router.get("/pokemons/:idPokemon", (req,res)=>{
     pokemonid (req,res);
 });
 
-router.get("/pokemons/name", (req,res)=>{
+router.get("/pokemon", (req,res)=>{
     pokemonName(req,res);
 });
 

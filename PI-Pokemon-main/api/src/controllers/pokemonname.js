@@ -1,5 +1,6 @@
 const axios = require ("axios");
 const API_URL = "https://pokeapi.co/api/v2/pokemon/";
+const {Pokemon} = require ("../db");
 
 const pokemonName = async (req, res) => {
   const {name} = req.query;
@@ -19,11 +20,9 @@ const pokemonName = async (req, res) => {
         // Realizar una solicitud a la URL construida
         const { data } = await axios.get(pokemonAPIUrl);
         
-         
+         console.log(data);
         // Crear el objeto "character" con los detalles del Pokémon
-        let pokemon = data.filter(nombre => nombre.name.toLowerCase() === lowercaseNameQuery);
-        
-         pokemon = {
+         let pokemon = {
           id: data.id,
           name: data.name,
           image: data.sprites.front_default,
@@ -35,20 +34,20 @@ const pokemonName = async (req, res) => {
           weight: data.weight,
           types: data.types.map((type) => type.type.name),
         };
+        
         // Responder con el Pokémon encontrado
         res.status(200).json(pokemon);
       } catch (error) {
         // Si no se encuentra en la API, buscar en la base de datos
-        const foundPokemon = pokemonDatabase.find(
-          (pokemon) => pokemon.name.toLowerCase() === lowercaseNameQuery
-        );
-  
-        if (foundPokemon) {
-          // Si se encuentra en la base de datos, responder con los datos
-          res.status(200).json(foundPokemon);
-        } else {
-          // Si no se encuentra en ninguna parte, responder con un mensaje de error
-          res.status(404).json({ message: "Pokémon no encontrado." });
+        const foundPokemon = await Pokemon.findAll(); // :'(
+          let pokeName;
+        for(let i=0;i<foundPokemon.length;i++){
+          pokeName=foundPokemon[i].name.toLowerCase();
+          if(pokeName===name){
+            res.status(200).json(foundPokemon[i]);
+            //para romper el for
+            return 
+          }
         }
       }
     } catch (error) {
