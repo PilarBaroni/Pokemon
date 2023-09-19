@@ -21,7 +21,7 @@ const pokemonName = async (req, res) => {
         const { data } = await axios.get(pokemonAPIUrl);
         
          console.log(data);
-        // Crear el objeto "character" con los detalles del Pokémon
+        // Crear el objeto "pokemon" con los detalles del Pokémon
          let pokemon = {
           id: data.id,
           name: data.name,
@@ -39,7 +39,7 @@ const pokemonName = async (req, res) => {
         res.status(200).json(pokemon);
       } catch (error) {
         // Si no se encuentra en la API, buscar en la base de datos
-        const foundPokemon = await Pokemon.findAll(); // :'(
+        const foundPokemon = await Pokemon.findAll(); 
           let pokeName;
         for(let i=0;i<foundPokemon.length;i++){
           pokeName=foundPokemon[i].name.toLowerCase();
