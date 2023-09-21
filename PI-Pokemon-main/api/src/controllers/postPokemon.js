@@ -22,8 +22,8 @@ const postPokemon = async (req, res) => {
 
     const typesPromisesArr = types.map(async(type)=>{
       const [foundType] = await Type.findOrCreate({
-        where:{name: type},
-        default:{name: type}
+        where:{type},
+        default:{type}
       })
       return foundType;
     });
