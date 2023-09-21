@@ -4,14 +4,14 @@ const {Type} = require('../db');
 
 const getTypes = async(req, res)=>{
     try {
-         // Verifica si la base de datos está vacía
+         
         const dbTypes = await Type.findAll();
-
+        // Verifica si la base de datos está vacía
         if(dbTypes.length===0){
-            // Si la base de datos está vacía, obtén los tipos de la API
+            // Si la base de datos está vacía, obtiene los tipos de la API
             const apiResponse = await axios.get('https://pokeapi.co/api/v2/type');
             const apiTypes = apiResponse.data.results;
-
+            
             // Guarda los tipos de la API en la base de datos
             await Type.bulkCreate(apiTypes.map((type) => ({ name: type.name })));
 

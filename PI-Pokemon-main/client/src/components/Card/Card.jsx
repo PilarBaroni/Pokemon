@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 
 const Card = ({id,name,image,types})=>{
+
+    if (!(typeof types[0]=== "string")){
+        for(let i = 0; i<types.length;i++){
+            types[i]= types[i].name
+        }
+    }
     return (
         <div>
             <h2>{name}</h2>
@@ -9,8 +15,13 @@ const Card = ({id,name,image,types})=>{
               <img src={image}/>
             </NavLink>
            <div>
-            <h3>{types[0]}</h3>
-            <h3>{types[1]}</h3>
+                {
+                    types.map(type=>{
+                        return (
+                            <h3>{type}</h3>
+                        )
+                    })
+                }
            </div>
         
         </div>

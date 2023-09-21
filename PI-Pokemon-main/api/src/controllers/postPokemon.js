@@ -20,18 +20,24 @@ const postPokemon = async (req, res) => {
       weight,
     });
 
-    const typesPromisesArr = types.map(async(type)=>{
+    // Crea un array de promesas para buscar o crear los tipos del Pokémon
+    const typesPromisesArr = types.map(async (type) => {
+      // Busca un tipo existente o crea uno nuevo si no existe
       const [foundType] = await Type.findOrCreate({
-        where:{type},
-        default:{type}
-      })
+        where: {name: type },
+        defaults: { name: type }
+      });
+      
       return foundType;
     });
-    const foundTypes = await Promise.all(typesPromisesArr)
-  
+
+    // Espera a que todas las promesas de tipos se resuelvan y devuelve los tipos encontrados/creados
+    const foundTypes = await Promise.all(typesPromisesArr);
+
     // Relaciona el nuevo Pokémon con los tipos indicados
     await newPokemon.addTypes(foundTypes);
 
+    // Responde con un código de estado 201 (creado) y los datos del nuevo Pokémon
     return res.status(201).json(newPokemon);
   } catch (error) {
     console.error(error);

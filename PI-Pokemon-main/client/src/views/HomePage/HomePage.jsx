@@ -8,12 +8,10 @@ const HomePage = () => {
 
   const pokemons= useSelector((state)=> state.pokemons);
   // const types= useSelector((state)=> state.types);
-  console.log(pokemons)
-
   useEffect(()=>{
     dispatch(allPokemons());
     dispatch(allTypes());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div >
