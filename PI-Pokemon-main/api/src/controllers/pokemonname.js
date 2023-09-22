@@ -20,7 +20,7 @@ const pokemonName = async (req, res) => {
         // Realizar una solicitud a la URL construida
         const { data } = await axios.get(pokemonAPIUrl);
         
-         console.log(data);
+        
         // Crear el objeto "pokemon" con los detalles del Pokémon
          let pokemon = {
           id: data.id,

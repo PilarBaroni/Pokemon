@@ -12,7 +12,7 @@ const Card = ({id,name,image,types})=>{
             <h2>{name}</h2>
 
             <NavLink to={`/detail/${id}`}> 
-              <img src={image}/>
+              <img src={image} alt={name}/>
             </NavLink>
            <div>
                 {

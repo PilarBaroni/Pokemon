@@ -39,3 +39,10 @@ export const allPokemons = () => {
       }
     }
   };
+
+  export const filterTypes = (type, origin)=>{
+        return ({
+        type: FILTER,
+        payload: {type , origin} 
+        })
+  };

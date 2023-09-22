@@ -11,6 +11,7 @@ const pokemonid = async (req, res) => { // Definición de la función 'pokemonid
         where: { id: idPokemon },
         include: Type, // Inclusión del tipo del Pokémon
       });
+    
 
       if (localPokemon) {
         return res.status(200).json(localPokemon); // Si se encuentra en la base de datos local, devuelve los detalles locales

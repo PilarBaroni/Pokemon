@@ -9,6 +9,10 @@ const Nav=()=>{
                  <button >
                   <NavLink  to="/home">Home🏠︎</NavLink>
                 </button>
+                
+                <button >
+                  <NavLink  to="/form">Crear Pokemon</NavLink>
+                </button>
 
              <Search />
 

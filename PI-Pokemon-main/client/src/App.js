@@ -9,11 +9,11 @@ function App() {
 
   return (
     <div className="App">
-      { location.pathname !== "/" && <Nav />}
+      { location.pathname === "/home" && <Nav />}
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path="/home" element={<HomePage/>} />
-        <Route path='/detail' element={<DetailPage />} />
+        <Route path='/detail/:id' element={<DetailPage />} />
         <Route path="/form" element={<FormPage/>} />
       </Routes>
     </div>

@@ -7,7 +7,7 @@ const getPokemons = async (req, res) => {
     const { data } = await axios.get(`${URL}?limit=10`); // Obtención de datos de la API de Pokémon y limitación a 10 Pokémon
 
     const pokemonList = data.results; // Extracción de la lista de Pokémon de los datos obtenidos de la API
-    console.log(pokemonList);
+    
     const pokemonDetails = []; // Creación de un arreglo para almacenar los detalles de cada Pokémon
 
     for(let i=0;i<pokemonList.length;i++){
