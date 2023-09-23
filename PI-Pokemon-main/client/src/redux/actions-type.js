@@ -1,4 +1,10 @@
-export const FILTER="FILTER";
-export const ORDER="ORDER";
 export const GET_ALL_POKEMONS="GET_ALL_POKEMONS";
-export const GET_ALL_TYPES= "GET_ALL_TYPES";
+export const GET_NAME= "GET_NAME";
+export const SET_FILTER = "SET_FILTER";
+export const TOGGLE_FILTER = "TOGGLE_FILTER";
+export const FILTER_POKEMONS = "FILTER_POKEMONS";
+export const SET_FILTERS_INACTIVE = "SET_FILTERS_INACTIVE";
+export const INCREMENT_PAGE = "INCREMENT_PAGE";
+export const DECREMENT_PAGE = "DECREMENT_PAGE";
+export const SET_ERROR = "SET_ERROR";
+export const SET_PAGE = "SET_PAGE";

@@ -1,31 +1,40 @@
 import { NavLink } from "react-router-dom";
 
 const Card = ({id,name,image,types})=>{
-
-    if (!(typeof types[0]=== "string")){
-        for(let i = 0; i<types.length;i++){
-            types[i]= types[i].name
-        }
-    }
     return (
-        <div>
-            <h2>{name}</h2>
+        <div >
+          
+            <h1>Pokemons</h1>
+          
+          <div >
 
-            <NavLink to={`/detail/${id}`}> 
-              <img src={image} alt={name}/>
-            </NavLink>
-           <div>
-                {
-                    types.map(type=>{
-                        return (
-                            <h3>{type}</h3>
-                        )
-                    })
-                }
-           </div>
-        
+            <h1>{name}</h1>
+
+          </div>
+
+          <div >
+
+            <img src={image} alt="pokemon pic"  />
+
+          </div>
+
+            <div>
+
+              <h3>{types}</h3>
+          
+            <div>
+
+              <button>
+                <NavLink to={`/detail/${id}`}>
+                  <h5>
+                   info
+                  </h5>
+                </NavLink>
+              </button>
+            </div>
+          </div>
         </div>
-    );
-}
+      );
+    };
 
 export default Card;

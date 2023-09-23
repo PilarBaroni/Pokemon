@@ -9,25 +9,43 @@ module.exports = (sequelize) => {
       primaryKey:true,
       defaultValue: DataTypes.UUIDV4
    },
-    name: {
+   name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
+      unique: true,
+      validate: {
+        // agregamos validaciones para que cumplan ciertos requisitos
+        notEmpty: true,
+        len: [1, 60],
+      },
+   },
     image:{
       type: DataTypes.STRING,
       allowNull:false
    },
-   hp:{
-    type: DataTypes.INTEGER,
-    allowNull:false
-   },
+   hp: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        // agregamos validaciones para que cumplan ciertos requisitos
+        notEmpty: true,
+        min: 1, // Debe ser al menos 1
+        max: 150, // No puede superar 150
+      },
+    },
    attack:{
     type: DataTypes.INTEGER,
     allowNull:false
    },
-   defense:{
-    type: DataTypes.INTEGER,
-    allowNull:false
+   defense: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        // agregamos validaciones para que cumplan ciertos requisitos
+        notEmpty: true,
+        min: 1, // Debe ser al menos 1
+        max: 150, // No puede superar 150
+      },
    },
    speed:{
     type: DataTypes.INTEGER,
