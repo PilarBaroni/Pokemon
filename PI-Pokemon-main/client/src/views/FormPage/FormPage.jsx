@@ -38,14 +38,7 @@ const handleTypeChange = (event) => {
   // Esto significa que estamos agregando los nuevos valores a la lista existente en lugar de reemplazarla.
   setSelectedTypes(selectedTypes.concat(selectedValues));
 };
-const handleInputChange = (event) => {
-  const { name, value } = event.target;
-  // Actualizamos el estado 'formData' para reflejar los cambios en los campos de entrada.
-  setFormData({
-    ...formData,
-    [name]: value,
-  });
-};
+
 const handleSubmit = async (event) => {
   event.preventDefault();
 
@@ -76,63 +69,71 @@ const handleSubmit = async (event) => {
     // Manejar errores de solicitud aquí
   }
 };
+const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    // Actualizamos el estado 'formData' para reflejar los cambios en los campos de entrada.
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name: </label>
-        <input onChange={handleInputChange} type="text" id="name" name="name" required /><br /><br />
+        <label htmlFor="name">Name: *</label>
+        <input type="text" id="name" name="name" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="image">Image URL: </label>
-        <input onChange={handleInputChange} type="text" id="image" name="image" required /><br /><br />
+        <label htmlFor="image">Image URL: *</label>
+        <input type="text" id="image" name="image" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="hp">HP: </label>
-        <input onChange={handleInputChange} type="number" id="hp" name="hp" required /><br /><br />
+        <label htmlFor="hp">HP: *</label>
+        <input type="number" id="hp" name="hp" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="attack">Attack: </label>
-        <input onChange={handleInputChange} type="number" id="attack" name="attack" required /><br /><br />
+        <label htmlFor="attack">Attack: *</label>
+        <input type="number" id="attack" name="attack" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="defense">Defense: </label>
-        <input onChange={handleInputChange} type="number" id="defense" name="defense" required /><br /><br />
+        <label htmlFor="defense">Defense: *</label>
+        <input type="number" id="defense" name="defense" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="speed">Speed: </label>
-        <input onChange={handleInputChange} type="number" id="speed" name="speed" /><br /><br />
+        <label htmlFor="speed">Speed:</label>
+        <input type="number" id="speed" name="speed" onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="height">Height: </label>
-        <input onChange={handleInputChange} type="number" id="height" name="height" /><br /><br />
+        <label htmlFor="height">Height:</label>
+        <input type="number" id="height" name="height" onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="weight">Weight: </label>
-        <input onChange={handleInputChange} type="number" id="weight" name="weight" /><br /><br />
+        <label htmlFor="weight">Weight:</label>
+        <input type="number" id="weight" name="weight" onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="type">Type: </label>
+        <label htmlFor="type">Type:</label>
         <div> 
-        <select id="type"  multiple={true} onChange={handleTypeChange} value={selectedTypes}>
-          <option value="normal">Normal</option>
-          <option value="fighting">Fighting</option>
-          <option value="poison">Poison</option>
-          <option value="ground">Ground</option>
-          <option value="rock">Rock</option>
-          <option value="bug">Bug</option>
-          <option value="ghost">Ghost</option>
-          <option value="steel">Steel</option>
-          <option value="fire">Fire</option>
-          <option value="water">Water</option>
-          <option value="grass">Grass</option>
-          <option value="electric">Electric</option>
-          <option value="psychic">Psychic</option>
-          <option value="ice">Ice</option>
-          <option value="dragon">Dragon</option>
-          <option value="dark">Dark</option>
-          <option value="fairy">Fairy</option>
-          <option value="unknown">Unknown</option>
-          <option value="shadow">Shadow</option>
-        </select><br /><br />
+          <select id="type" multiple={true} onChange={handleTypeChange} value={selectedTypes}>
+            <option value="normal">Normal</option>
+            <option value="fighting">Fighting</option>
+            <option value="poison">Poison</option>
+            <option value="ground">Ground</option>
+            <option value="rock">Rock</option>
+            <option value="bug">Bug</option>
+            <option value="ghost">Ghost</option>
+            <option value="steel">Steel</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="grass">Grass</option>
+            <option value="electric">Electric</option>
+            <option value="psychic">Psychic</option>
+            <option value="ice">Ice</option>
+            <option value="dragon">Dragon</option>
+            <option value="dark">Dark</option>
+            <option value="fairy">Fairy</option>
+            <option value="unknown">Unknown</option>
+            <option value="shadow">Shadow</option>
+          </select><br /><br />
         </div>
         <div>
           <p>Seleccionado(s): {selectedTypes.join(", ")}</p>
         </div>
 
-        <button type="sumbit">Crear Pokémon</button>
+        <button type="submit">Crear Pokémon</button>
       </form>
     </div>
   );

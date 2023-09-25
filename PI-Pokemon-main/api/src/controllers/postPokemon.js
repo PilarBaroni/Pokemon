@@ -40,7 +40,7 @@ const postPokemon = async (req, res) => {
     // Responde con un código de estado 201 (creado) y los datos del nuevo Pokémon
     return res.status(201).json(newPokemon);
   } catch (error) {
-    console.error(error);
+    
     return res.status(500).json({ error: error.message });
   }
 };
