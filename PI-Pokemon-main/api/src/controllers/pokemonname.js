@@ -55,7 +55,7 @@ const pokemonName = async (req, res) => {
       // Manejar otros errores
       res.status(500).json({ message: "Error interno del servidor." });
     }
-  };
+};
 
   module.exports ={
     pokemonName

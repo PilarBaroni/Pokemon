@@ -12,7 +12,8 @@
     align-items: center;
     background-color: #f2d842d7;
     height: 70px;
-    
+    border: solid orange 2px;
+    border-radius: 10px;
   }
 
   .btn {

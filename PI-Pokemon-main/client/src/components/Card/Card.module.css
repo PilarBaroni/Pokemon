@@ -1,0 +1,7 @@
+.containcard{
+    border: solid orange 5px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    height: 85%;
+    width: 100%;
+}

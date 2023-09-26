@@ -17,7 +17,7 @@ const Search = () => {
     }
      return dispatch(loadPokemon("clean"))
     
-  }, [detailPokemon]);
+  }, [detailPokemon, dispatch, navigate]);
 
   const [name, setName] = useState(''); // Crea un estado local para el nombre del Pokémon
 

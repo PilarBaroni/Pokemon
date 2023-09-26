@@ -45,7 +45,7 @@ const DetailPage = () => {
 
    // Verificar que pokemon.types esté definido antes de usarlo
    const typesClass = pokemon?.types ? pokemon.types[0] : "";
-  console.log(typesClass)
+  
   return (
     <div className={`${styles.container} ${styles[typesClass || 'default']}`}>
       <div className={styles.backButtonContainer}>

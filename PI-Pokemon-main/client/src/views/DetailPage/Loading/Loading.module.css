@@ -9,7 +9,7 @@
   background-size: cover; /* Ajusta el tamaño de la imagen de fondo según el contenedor */
   display: flex;
   justify-content:center;
-  align-items:start;
+  align-items:flex-start;
   z-index: 9999; 
 }
 .loadingText {

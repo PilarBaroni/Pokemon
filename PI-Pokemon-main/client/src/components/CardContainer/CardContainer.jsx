@@ -1,11 +1,11 @@
 import Card from "../Card/Card";
 import style from "../CardContainer/CardContainer.module.css";
-const CardContainer = ({pokemons})=>{
+const CardContainer = ({ currentCharacters})=>{
 
     return (
         <div className={style.cartitas}>
             {
-                pokemons?.map((pokemon)=>{
+                currentCharacters?.map((pokemon)=>{
                     return (
                         <Card
                         key= {pokemon.id}
