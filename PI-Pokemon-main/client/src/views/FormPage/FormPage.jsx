@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 const FormPage = () => {
   const [formData, setFormData] = useState({
@@ -81,31 +82,31 @@ const handleInputChange = (event) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name: *</label>
+        <label htmlFor="name">Name: * </label>
         <input type="text" id="name" name="name" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="image">Image URL: *</label>
+        <label htmlFor="image">Image URL: * </label>
         <input type="text" id="image" name="image" required onChange={handleInputChange} /><br /><br />
 
         <label htmlFor="hp">HP: *</label>
         <input type="number" id="hp" name="hp" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="attack">Attack: *</label>
+        <label htmlFor="attack">Attack: * </label>
         <input type="number" id="attack" name="attack" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="defense">Defense: *</label>
+        <label htmlFor="defense">Defense: * </label>
         <input type="number" id="defense" name="defense" required onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="speed">Speed:</label>
+        <label htmlFor="speed">Speed: </label>
         <input type="number" id="speed" name="speed" onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="height">Height:</label>
+        <label htmlFor="height">Height: </label>
         <input type="number" id="height" name="height" onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="weight">Weight:</label>
+        <label htmlFor="weight">Weight: </label>
         <input type="number" id="weight" name="weight" onChange={handleInputChange} /><br /><br />
 
-        <label htmlFor="type">Type:</label>
+        <label htmlFor="type">Type: </label>
         <div> 
           <select id="type" multiple={true} onChange={handleTypeChange} value={selectedTypes}>
             <option value="normal">Normal</option>
@@ -135,6 +136,7 @@ const handleInputChange = (event) => {
 
         <button type="submit">Crear Pokémon</button>
       </form>
+      <NavLink to="/home">Home</NavLink>
     </div>
   );
 };

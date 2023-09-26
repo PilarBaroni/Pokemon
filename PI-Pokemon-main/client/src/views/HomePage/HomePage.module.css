@@ -2,4 +2,15 @@
     background: linear-gradient(-45deg, #ffcb05 50%, #3a5ca8 50%);
     height: 100vh;
     width: 100%;
+    
+}
+.section {
+
+}
+.divcart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
 }

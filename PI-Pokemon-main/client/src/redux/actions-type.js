@@ -1,5 +1,7 @@
-export const FILTER="FILTER";
-export const ORDER="ORDER";
 export const GET_ALL_POKEMONS="GET_ALL_POKEMONS";
 export const LOAD_POKEMON ="LOAD_POKEMON";
 export const GET_ALL_TYPES= "GET_ALL_TYPES";
+export const ORDER_ATTACK = 'ORDER_ATTACK';
+export const ORDER_BY_NAME = 'ORDER_BY_NAME';
+export const SET_FILTER_BY_ORIGIN = 'SET_FILTER_BY_ORIGIN';
+export const SET_FILTER_BY_TYPE = 'SET_FILTER_BY_TYPE';

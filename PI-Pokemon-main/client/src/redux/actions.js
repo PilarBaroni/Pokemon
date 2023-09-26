@@ -1,4 +1,10 @@
-import { FILTER, ORDER, LOAD_POKEMON, GET_ALL_POKEMONS,GET_ALL_TYPES } from "./actions-type";
+import { ORDER_ATTACK,
+  ORDER_BY_NAME,
+  SET_FILTER_BY_ORIGIN,
+  SET_FILTER_BY_TYPE, 
+  LOAD_POKEMON, 
+  GET_ALL_POKEMONS,
+  GET_ALL_TYPES } from "./actions-type";
 import axios from "axios";
 
 const endpoint = "http://localhost:3001";
@@ -63,9 +69,29 @@ export const loadPokemon = (name) => {
     };
   };
 
-  export const filterTypes = (type, origin)=>{
-        return ({
-        type: FILTER,
-        payload: {type , origin} 
-        })
+  export const setFilterByOrigin = (payload)=>{
+    return{
+      type: SET_FILTER_BY_ORIGIN,
+      payload,
+    };
   };
+  
+  export const setFilterByType = (types)=>{
+    return{
+      type: SET_FILTER_BY_TYPE,
+      payload: types
+    }
+  }
+  export const orderByAttack = (payload)=>{
+    return{
+      type: ORDER_ATTACK,
+      payload,
+    }
+  }
+  
+  export const orderByName = (payload)=>{
+    return{
+      type: ORDER_BY_NAME,
+      payload,
+    }
+  }
