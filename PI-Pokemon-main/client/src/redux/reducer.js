@@ -1,11 +1,12 @@
 // Importamos las constantes para las acciones
-import { FILTER, ORDER, GET_ALL_POKEMONS,GET_ALL_TYPES } from "./actions-type";
+import { FILTER, ORDER,LOAD_POKEMON, GET_ALL_POKEMONS,GET_ALL_TYPES } from "./actions-type";
 
 // Definimos el estado inicial de nuestra aplicación
 const initialState = {
   allPokemons: [],    // Almacena todos los pokemones
   types: [],         
-  pokemonsFilt: []
+  pokemonsFilt: [],
+  detailPokemon: {},
 
 };
 
@@ -24,6 +25,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         allTypes: action.payload
       };
+      case LOAD_POKEMON:
+        return {
+            ...state,
+            detailPokemon: action.payload
+        }
       case FILTER:
         // Desestructuramos los valores type y origin de action.payload
         const { type, origin } = action.payload;

@@ -1,0 +1,86 @@
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../Imagenes/pokebola.gif);
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo según el contenedor */
+  display: flex;
+  justify-content:center;
+  align-items:start;
+  z-index: 9999; 
+}
+.loadingText {
+    
+    font-size: 40px;
+    color: rgb(255, 230, 0);
+    font-family: fantasy;
+  }
+  .loader{
+    position:absolute;
+    font-size: 20px;
+    margin: 10%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load4 1.3s infinite linear;
+    animation: load4 1.3s infinite linear;
+  }
+
+  @-webkit-keyframes load4 {
+    0%, 100% {
+      box-shadow: 0em -3em 0em 0.2em #FFFF00, 2em -2em 0 0em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 0em #FFFF00;
+    }
+    12.5% {
+      box-shadow: 0em -3em 0em 0em #FFFF00, 2em -2em 0 0.2em #FFFF00, 3em 0em 0 0em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    25% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 0em #FFFF00, 3em 0em 0 0.2em #FFFF00, 2em 2em 0 0em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    37.5% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 0em #FFFF00, 2em 2em 0 0.2em #FFFF00, 0em 3em 0 0em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    50% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 0em #FFFF00, 0em 3em 0 0.2em #FFFF00, -2em 2em 0 0em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    62.5% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 0em #FFFF00, -2em 2em 0 0.2em #FFFF00, -3em 0em 0 0em #FFFF00, -2em -2em 0 0em #FFFF00;
+    }
+    75% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 0em #FFFF00, -3em 0em 0 0.2em #FFFF00, -2em -2em 0 0em #FFFF00;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0em 0em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 0em #FFFF00, -3em 0em 0 0em #FFFF00, -2em -2em 0 0.2em #FFFF00;
+    }
+  }
+  
+  @keyframes load4 {
+    0%, 100% {
+      box-shadow: 0em -3em 0em 0.2em #FFFF00, 2em -2em 0 0em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 0em #FFFF00;
+    }
+    12.5% {
+      box-shadow: 0em -3em 0em 0em #FFFF00, 2em -2em 0 0.2em #FFFF00, 3em 0em 0 0em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    25% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 0em #FFFF00, 3em 0em 0 0.2em #FFFF00, 2em 2em 0 0em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    37.5% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 0em #FFFF00, 2em 2em 0 0.2em #FFFF00, 0em 3em 0 0em #FFFF00, -2em 2em 0 -0.5em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    50% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 0em #FFFF00, 0em 3em 0 0.2em #FFFF00, -2em 2em 0 0em #FFFF00, -3em 0em 0 -0.5em #FFFF00, -2em -2em 0 -0.5em #FFFF00;
+    }
+    62.5% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 0em #FFFF00, -2em 2em 0 0.2em #FFFF00, -3em 0em 0 0em #FFFF00, -2em -2em 0 0em #FFFF00;
+    }
+    75% {
+      box-shadow: 0em -3em 0em -0.5em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 0em #FFFF00, -3em 0em 0 0.2em #FFFF00, -2em -2em 0 0em #FFFF00;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0em 0em #FFFF00, 2em -2em 0 -0.5em #FFFF00, 3em 0em 0 -0.5em #FFFF00, 2em 2em 0 -0.5em #FFFF00, 0em 3em 0 -0.5em #FFFF00, -2em 2em 0 0em #FFFF00, -3em 0em 0 0em #FFFF00, -2em -2em 0 0.2em #FFFF00;
+    }
+  }

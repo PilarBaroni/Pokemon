@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+
+.imgPok{
+    float: left; 
+    width: 150px;
+    height: 60px;
+    margin-left: -100px;
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f2d842d7;
+    height: 70px;
+    
+  }
+
+  .btn {
+    
+    font-family: 'Inconsolata', monospace;
+    background: linear-gradient(315deg, orange 20%, #0a5799 74%);
+    line-height: 35px;
+    padding: 0 20px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 blueviolet,
+                0 20px 25px 0 rgba(0, 0, 0, 0.2);
+   
+    text-decoration: none; 
+    color: rgba(255, 255, 255, 0.541);
+
+  }
+  .btn:hover{
+    color: white;
+    background: linear-gradient(315deg,#0a5799 20%, orange 74% );
+    
+  }
+
+  
+  
+
+  

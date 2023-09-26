@@ -4,6 +4,7 @@ const {Pokemon} = require ("../db");
 
 const pokemonName = async (req, res) => {
   const {name} = req.query;
+  //console.log(name);
     try {
       // Obtener el nombre de la consulta (query param)
       if (!name) {
@@ -34,7 +35,7 @@ const pokemonName = async (req, res) => {
           weight: data.weight,
           types: data.types.map((type) => type.type.name),
         };
-        
+       
         // Responder con el Pokémon encontrado
         res.status(200).json(pokemon);
       } catch (error) {
