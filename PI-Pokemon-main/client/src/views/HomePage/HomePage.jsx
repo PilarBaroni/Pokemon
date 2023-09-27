@@ -88,7 +88,7 @@ const HomePage = () => {
       <Nav />
       {isLoading ? ( // Mostrar la pantalla de carga mientras isLoading sea true
         <div> 
-          <h1>Loading Pokemons...</h1>
+          <h1 className={styles.load}>Loading Pokemons...</h1>
           <img src= {running} alt="Imagen"/>
         </div>
       ) : (

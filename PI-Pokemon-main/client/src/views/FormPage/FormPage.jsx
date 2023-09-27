@@ -73,7 +73,7 @@ const handleSubmit = async (event) => {
     }
 
   } catch (error) {
-    alert("Error al crear el Pokémon:", error);
+    alert ("Error al crear el Pokémon:", error);
    
   }
 };

@@ -9,8 +9,8 @@ const Card = ({id,name,image,types})=>{
         }
     }
 
-       // Verificar que pokemon.types esté definido antes de usarlo
-   const typesClass = types ? types[0] : "";
+    // Verificar que pokemon.types esté definido antes de usarlo
+    const typesClass = types ? types[0] : "";
     return (
         <div className={`${styles.containcard} ${styles[typesClass || 'default']}`}>
             <h2 className={styles.nombrePoke}>{name}</h2>
@@ -18,11 +18,11 @@ const Card = ({id,name,image,types})=>{
             <NavLink  to={`/detail/${id}`} className={styles.navlk}> 
               <img src={image} alt={name} className={styles.imagepoke}/>
             </NavLink>
-           <div >
+           <div>
                 {
                     types.map(type=>{
                         return (
-                            <h3>{type}</h3>
+                            <h3 className={styles.tpes2}>{type}</h3>
                         )
                     })
                 }
