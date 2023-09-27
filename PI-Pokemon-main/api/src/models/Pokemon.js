@@ -16,26 +16,37 @@ module.exports = (sequelize) => {
       validate: {
         // agregamos validaciones para que cumplan ciertos requisitos
         notEmpty: true,
-        len: [1, 60],
+        len: [1, 20], //el campo debe tener una longitud que esté dentro del rango de 1 a 20 caracteres
       },
    },
     image:{
       type: DataTypes.STRING,
-      allowNull:false
+      allowNull:false,
+      validate: {
+        // agregamos validaciones para que cumplan ciertos requisitos
+        notEmpty: true,
+        isUrl: true,
+      },
    },
    hp: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         // agregamos validaciones para que cumplan ciertos requisitos
-        notEmpty: true,
+        notEmpty: true, // significa que el campo correspondiente debe tener algún contenido. No puede estar vacío.
         min: 1, // Debe ser al menos 1
         max: 150, // No puede superar 150
       },
     },
    attack:{
     type: DataTypes.INTEGER,
-    allowNull:false
+    allowNull:false,
+    validate: {
+      // agregamos validaciones para que cumplan ciertos requisitos
+      notEmpty: true,
+      min: 1, // Debe ser al menos 1
+      max: 150, // No puede superar 150
+    },
    },
    defense: {
       type: DataTypes.INTEGER,
@@ -61,3 +72,4 @@ module.exports = (sequelize) => {
   }
   }, { timestamps: false });
 };
+

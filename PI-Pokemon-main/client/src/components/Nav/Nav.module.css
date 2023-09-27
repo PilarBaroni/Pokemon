@@ -5,6 +5,10 @@
     width: 150px;
     height: 60px;
     margin-left: -100px;
+    
+}
+.imgPok:hover{
+  transform: scale(1.09);
 }
 .nav {
     display: flex;
@@ -33,7 +37,7 @@
   .btn:hover{
     color: white;
     background: linear-gradient(315deg,#0a5799 20%, orange 74% );
-    
+    transform: scale(1.09);
   }
 
   

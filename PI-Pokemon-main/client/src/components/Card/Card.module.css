@@ -1,7 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Skranji&display=swap');
+
 .containcard{
-    border: solid orange 5px;
-    margin-bottom: 10px;
-    border-radius: 10%;
-    height: 80%;
-    width: fit-content;
+    margin-top: 80px;
+    height: 230px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    border: 3px rgb(255, 255, 255) solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    
+};
+
+
+.imagepoke{ 
+    height: 200px;
+    width: 150px;
+    object-fit: contain;
+};
+
+
+.tipos2{
+   
 }
+.navlk {
+    margin-bottom: -20px;
+}
+.navlk:hover{
+    transform: scale(1.02);
+}
+.nombrePoke{
+    font-family: 'Croissant One', cursive;
+    text-transform: uppercase;
+    margin-bottom: -2px;
+
+}
+.bug {
+    background-color: #7e9a25;
+  }
+  
+  .dark {
+    background-color: #5a5d6b;
+  }
+  
+  .dragon {
+    background-color: orange;
+  }
+  
+  .electric {
+    background-color: #f2c944;
+  }
+  
+  .fairy {
+    background-color: #ee93e4;
+  }
+  
+  .fight {
+    background-color: #d83e55;
+  }
+  
+  .fire {
+    background-color: #f7a04c;
+  }
+  
+  .flying {
+    background-color: gray;
+  }
+  
+  .ghost {
+    background-color: #666dc3;
+  }
+  
+  .grass {
+    background-color: #5dbd5f;
+  }
+  
+  .ground {
+    background-color: #d28153;
+  }
+  
+  .ice {
+    background-color: #7ed0c7;
+  }
+  
+  .normal {
+    background-color: #99999f;
+  }
+  
+  .poison {
+    background-color: #b360ca;
+  }
+  
+  .psychic {
+    background-color: #f5618b;
+  }
+  
+  .rock {
+    background-color: #b6a87c;
+  }
+  
+  .steel {
+    background-color:  #5392a0;
+  }
+  
+  .water {
+    background-color: #519adc;
+  }

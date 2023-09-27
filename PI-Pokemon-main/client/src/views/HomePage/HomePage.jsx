@@ -95,39 +95,39 @@ const HomePage = () => {
         <div className={styles.divcart}>
           <div>
             {/* Selección de ordenar */}
-            <select className="orderFilters" onChange={(event) => handleOrderByName(event)}>
-              <option value="Ascendant">A-Z</option>
-              <option value="Descendant">Z-A</option>
+            <select className={styles.select} onChange={(event) => handleOrderByName(event)}>
+              <option value="Ascendant" className={styles.optiona}>A-Z</option>
+              <option value="Descendant" className={styles.optiona}>Z-A</option>
             </select>
   
             {/* Selección de filtrar por tipo */}
             <select
-              className="orderFilters"
+              className={styles.select}
               onChange={handleTypeFilter}
               disabled={!areTypesLoaded} // Deshabilita el filtro hasta que los tipos estén cargados
             >
               
-              <option value="All">All TYPES</option>
+              <option value="All" className={styles.optiona}>All TYPES</option>
               {types &&
                 types.map((tipo) => (
-                  <option key={tipo.id} value={tipo.name}>
+                  <option key={tipo.id} value={tipo.name} className={styles.optiona}>
                     {tipo.name}
                   </option>
                 ))}
             </select>
   
             {/* Selección de ordenar por ataque */}
-            <select onChange={(event) => handleOrderByAttack(event)}>
-             <option value="">All ATTACK</option>
-              <option value="Attack-ASC">Ascending attack</option>
-              <option value="Attack-DESC">Descending attack</option>
+            <select onChange={(event) => handleOrderByAttack(event)} className={styles.select}>
+             <option value="" className={styles.optiona} >All ATTACK</option>
+              <option value="Attack-ASC" className={styles.optiona}>Ascending attack</option>
+              <option value="Attack-DESC" className={styles.optiona}>Descending attack</option>
             </select>
   
             {/* Selección de filtrar por origen */}
-            <select className="orderFilters" onChange={(event) => handleFilterOrigin(event)}>
-              <option value="All">All ORIGIN</option>
-              <option value="DataBase">Data Base</option>
-              <option value="Api">Api</option>
+            <select  onChange={(event) => handleFilterOrigin(event)} className={styles.select}>
+              <option value="All" className={styles.optiona} >All ORIGIN</option>
+              <option value="DataBase" className={styles.optiona}>Data Base</option>
+              <option value="Api" className={styles.optiona}>Api</option>
             </select>
           </div>
   
