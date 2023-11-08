@@ -38,13 +38,13 @@ const DetailPage = () => {
     getPokemonDetails();
   }, [id]);
 
-    if (isLoading) {
+  if (isLoading) {
       return <LoadingScreen />; // Mostrar pantalla de carga mientras se carga
-    }
+  }
   
 
-   // Verificar que pokemon.types esté definido antes de usarlo
-   const typesClass = pokemon?.types ? pokemon.types[0] : "";
+  // Verificar que pokemon.types esté definido antes de usarlo
+  const typesClass = pokemon?.types ? pokemon.types[0] : "";
   
   return (
     <div className={`${styles.container} ${styles[typesClass || 'default']}`}>

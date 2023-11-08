@@ -1,37 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@450&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@450&display=swap");
 
-
-.contenedor{
-    background: linear-gradient(-45deg, #ffcb05 50%, #3a5ca8 50%);
-    height: 100vh;
-    width: 100%;
-    margin-bottom: -50px;
+.contenedor {
+  background-image: linear-gradient(to top left, orange 20%, #0a5799 74%);
+  height: 100vh;
+  margin-bottom: -20px;
+}
+.pikachugalleta{
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin-right: 50px;
+  width: 160px;
+  height: auto;
+}
+.back{
+  background-color: #f2d842d7;
+  height: 45px;
+  border-radius: 0px 0px 19px 19px;
+  -webkit-border-radius: 0px 0px 19px 19px;
+  -moz-border-radius: 0px 0px 19px 19px;
+  border-top: transparent;
+  border-left:solid orange 2px;
+  border-right: solid orange 2px;
+  border-bottom:solid orange 2px;
+  width: 40%;
 }
 .select {
-    width: min(10rem, 50vw);
-    background: linear-gradient(315deg, orange 20%, #0a5799 74%);
-    border-radius: 0.25rem;
-    overflow: hidden;
-    margin-top: 10px;
-    border: 2px #ffcb05 solid;
-    margin-right: 5px ;
-    font-family: 'Rubik', sans-serif;
-  }
+  width: min(10rem, 50vw);
+  background: linear-gradient(315deg, orange 20%, #0a5799 74%);
+  overflow: hidden;
+  margin-top: 10px;
+  border-top: 3px solid red;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid white;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  margin-right: 5px;
+  font-family: "Rubik", sans-serif;
+  color: rgba(255, 255, 0, 0.897);
   
-  .select:hover{
-    cursor: pointer;
-    background: linear-gradient(315deg,#0a5799 20%, orange 74% );
-    transform: scale(1.07);
-  }
-  .optiona{
-    font-family: 'Rubik', sans-serif;
-    background-color: #ffcb05;
-  }
-
-.load{
-  font-family: 'Dela Gothic One', cursive;
 }
-  
+.divcart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  
+}
 
+.select:hover {
+  color: blue;
+  cursor: pointer;
+  background: linear-gradient(315deg, #0a5799 20%, orange 74%);
+  transform: scale(1.07);
+}
+.optiona {
+  font-family: "Rubik", sans-serif;
+  background-color: #ffcb05;
+}
+
+.load {
+  font-family: "Dela Gothic One", cursive;
+}

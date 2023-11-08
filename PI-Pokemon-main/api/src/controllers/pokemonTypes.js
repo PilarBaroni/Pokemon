@@ -11,7 +11,7 @@ const getTypes = async(req, res)=>{
             // Si la base de datos está vacía, obtiene los tipos de la API
             const apiResponse = await axios.get('https://pokeapi.co/api/v2/type');
             const apiTypes = apiResponse.data.results;
-            
+        
             // Guarda los tipos de la API en la base de datos
             await Type.bulkCreate(apiTypes.map((type) => ({ name: type.name })));
 

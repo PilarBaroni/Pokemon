@@ -18,12 +18,12 @@ const FormPage = () => {
     
     name: "",
     image: "",
-    hp: "",
-    attack: "",
-    defense: "",
-    speed: "",
-    height: "",
-    weight: "",
+    hp: null,
+    attack: null,
+    defense: null,
+    speed: 0,
+    height: 0,
+    weight: 0,
     types: [],
   });
   
@@ -31,32 +31,45 @@ const FormPage = () => {
     dispatch(allTypes());
   }, []);
 
-// Creamos un estado 'selectedTypes' para rastrear los tipos seleccionados.
-const [selectedTypes, setSelectedTypes] = useState([]);
-const [errors,setErrors]=useState({});
+  // Creamos un estado 'selectedTypes' para rastrear los tipos seleccionados.
+  const [selectedTypes, setSelectedTypes] = useState([]);
+  const [errors,setErrors]=useState({});
 
 
-// Esta función se ejecuta cada vez que cambia la selección en la lista desplegable.
+  // Esta función se ejecuta cada vez que cambia la selección en la lista desplegable.
   const handleTypeChange = (event) => {
+    // Obtener todas las opciones seleccionadas del elemento que generó el evento
     let selectedOptions = [...event.target.selectedOptions];
-    const maxOptions = 2;
+    
+    // Definir el número máximo de opciones permitidas (en este caso, 1)
+    const maxOptions = 1;
+  
+    // Verificar si se seleccionaron más opciones de las permitidas
     if (selectedOptions.length > maxOptions) {
-    event.target.options[selectedOptions[selectedOptions.length-1].index].selected = false;
+      // Si se seleccionaron más de una, deseleccionar la última opción seleccionada
+      event.target.options[selectedOptions[selectedOptions.length - 1].index].selected = false;
     }
+  
+    // Crear un array que contenga solo los valores de las opciones seleccionadas
     selectedOptions = selectedOptions.map(opcion => opcion.value);
+  
+    // Actualizar el estado "formData" con los valores de las opciones seleccionadas
     setFormData({
       ...formData,
       types: selectedOptions,
-    })
+    });
+  
+    // Realizar validación y actualizar el estado "errors" con los resultados de la validación
     setErrors(validate({
       ...formData,
       types: selectedOptions,
-    }))
-    setSelectedTypes(selectedOptions)
-    
+    }));
+  
+    // Actualizar el estado "selectedTypes" con los valores de las opciones seleccionadas
+    setSelectedTypes(selectedOptions);
   };
 
-const handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
   event.preventDefault();
   try {
     // Enviar una solicitud POST al servidor para crear el Pokémon
@@ -76,7 +89,7 @@ const handleSubmit = async (event) => {
     alert ("Error al crear el Pokémon:", error);
    
   }
-};
+  };
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     // Actualizamos el estado 'formData' para reflejar los cambios en los campos de entrada.
@@ -111,32 +124,31 @@ const handleSubmit = async (event) => {
         </NavLink>
         <div className={styles.containerGuia}>
           <div className={styles.necesitasP}>
-                    <h3>Necesitás imágenes para crear tu pokemon?</h3>
-                    <h4>
-                      Podés buscar aquí:{" "}
-                      <a
-                        className={styles.linkParaCrear}
-                        href="https://custom-doodle.com/collection/pokemon/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Link
-                      </a>
-                    </h4>
-                  </div>
+              <h3>Do you need images for your pokemon?</h3>
+            <h4>
+                You can find them here:{" "}
+              <a
+                className={styles.linkParaCrear}
+                href="https://custom-doodle.com/collection/pokemon/"
+                target="_blank"
+                rel="noreferrer">
+                Link
+              </a>
+            </h4>
+          </div>
                   <div className={styles.guiaP}>
-                    <h4 className={styles.guia1}>Guia:</h4>
-                    <p>1- Elige el pokemon deseado</p>
-                    <p>2- Haz click derecho sobre el mismo </p>
-                    <p>3- Selecciona "Copiar dirección de la imagen" </p>
-                    <p>4- Pega la dirección en el formulario </p>
-                    <p>5- Sigue creando tu pokemon! </p>
-              </div>
+                    <h4 className={styles.guia1}>Guide:</h4>
+                    <p>1- Select the wished pokemon</p>
+                    <p>2- Right click on it </p>
+                    <p>3- Select "Copy image direction" </p>
+                    <p>4- Paste the direccion on the formulary </p>
+                    <p>5- Keep creating your pokemon! </p>
+                  </div>
             </div>
          </div>
         <div className={styles.formContainer}>
               <form onSubmit={handleSubmit} className={styles.form}>
-              <h3 className={styles.formTitle}>Crea un pokemon</h3>
+              <h3 className={styles.formTitle}>Create a pokemon</h3>
                 <label htmlFor="name">Name: * </label>
                 <input type="text" id="name" name="name" required onChange={handleInputChange} className={styles.inputContainer} /><br /><br />
                 {
@@ -147,7 +159,7 @@ const handleSubmit = async (event) => {
                 }
 
                 <label htmlFor="image">Image URL: * </label>
-                <input type="text" id="image" name="image" required onChange={handleInputChange} className={styles.inputContainer} /><br /><br />
+                <input type="url" id="image" name="image" required onChange={handleInputChange} className={styles.inputContainer} /><br /><br />
                 {
                   errors.image && 
                   <span className={styles.error}>{
@@ -229,7 +241,7 @@ const handleSubmit = async (event) => {
                 </div>
                 
                 <div>
-                  <p>Seleccionado(s): {selectedTypes.join(", ")}</p>
+                  <p>Selected(s): {selectedTypes.join(", ")}</p>
                 </div>
 
                 <div >

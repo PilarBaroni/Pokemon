@@ -1,46 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 
-.imgPok{
-    float: left; 
-    width: 150px;
-    height: 60px;
-    margin-left: -100px;
-    
+.imgPok {
+  float: left;
+  width: 150px;
+  height: 60px;
+  margin-left: -100px;
 }
-.imgPok:hover{
+.imgPok:hover {
+  transform: scale(1.09);
+}
+.pokeg{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: auto;
+  margin-top: 8px;
+  margin-left: 40px;
+}
+.pokeg:hover{
   transform: scale(1.09);
 }
 .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f2d842d7;
-    height: 70px;
-    border: solid orange 2px;
-    border-radius: 10px;
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f2d842d7;
+  height: 70px;
+  border: solid orange 2px;
+  border-radius: 10px;
+}
 
-  .btn {
-    
-    font-family: 'Inconsolata', monospace;
-    background: linear-gradient(315deg, orange 20%, #0a5799 74%);
-    line-height: 35px;
-    padding: 0 20px 0 20px;
-    border-radius: 30px;
-    box-shadow: 0 0 25px 0 blueviolet,
-                0 20px 25px 0 rgba(0, 0, 0, 0.2);
-   
-    text-decoration: none; 
-    color: rgba(255, 255, 255, 0.541);
+.btn {
+  font-family: "Inconsolata", monospace;
+  background: linear-gradient(315deg, orange 20%, #0a5799 74%);
+  line-height: 35px;
+  padding: 0 20px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 blueviolet, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
 
-  }
-  .btn:hover{
-    color: white;
-    background: linear-gradient(315deg,#0a5799 20%, orange 74% );
-    transform: scale(1.09);
-  }
-
-  
-  
-
-  
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.541);
+}
+.btn:hover {
+  color: white;
+  background: linear-gradient(315deg, #0a5799 20%, orange 74%);
+  transform: scale(1.09);
+}

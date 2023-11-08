@@ -1,11 +1,13 @@
 import  { useEffect, useState } from 'react';
 import CardContainer from '../../components/CardContainer/CardContainer';
 import { useSelector, useDispatch } from 'react-redux';
-import { allPokemons,setFilterByType,setFilterByOrigin,orderByAttack, orderByName,allTypes } from '../../redux/actions';
+import { allPokemons,setFilterByType,setFilterByOrigin, orderByName,allTypes } from '../../redux/actions';
 import styles from "../HomePage/HomePage.module.css";
 import Nav from "../../components/Nav/Nav";
 import Paginado from '../../components/Paginado/Paginado';
 import running from "../../Imagenes/running.gif";
+import pikagalleta from "../../Imagenes/pikagalleta.gif";
+
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -59,26 +61,22 @@ const HomePage = () => {
 
     // FILTRADO POR TYPE
     const handleTypeFilter = (event) => {
-      
+      setCurrentPage(1);
       dispatch(setFilterByType(event.target.value));
     };
+    
     // filtrado por api o db
     const handleFilterOrigin = (event) => {
+      setCurrentPage(1);
       const filterValue = event.target.value;
-      
       dispatch(setFilterByOrigin(filterValue));
     };
-    // ORDEN POR ATTACK
-  const handleOrderByAttack = (event) => {
-    const orderValue = event.target.value;
-    dispatch(orderByAttack(orderValue));
-    setOrder(`Ordenado ${orderValue}`);
-  };
-  // ORDEN POR NAME
+
+  // ORDEN POR NAME y ataque
   const handleOrderByName = (event) => {
-    const orderValue = event.target.value;
-    dispatch(orderByName(orderValue));
-    setOrder(`Ordenado ${orderValue}`);
+    const orderBy = event.target.value;
+    dispatch(orderByName(orderBy));
+    setOrder(`Ordenado ${orderBy}`);
   };
          
 
@@ -93,11 +91,14 @@ const HomePage = () => {
         </div>
       ) : (
         <div className={styles.divcart}>
-          <div>
+          < img src={pikagalleta} alt="pikachu" className={styles.pikachugalleta}/>
+          <div className={styles.back}>
             {/* Selección de ordenar */}
             <select className={styles.select} onChange={(event) => handleOrderByName(event)}>
-              <option value="Ascendant" className={styles.optiona}>A-Z</option>
-              <option value="Descendant" className={styles.optiona}>Z-A</option>
+              <option value="0"  className={styles.optiona}>A-Z</option>
+              <option value="1" className={styles.optiona}>Z-A</option>              
+              <option value="2" className={styles.optiona}>Ascending attack</option>
+              <option value="3" className={styles.optiona}>Descending attack</option>
             </select>
   
             {/* Selección de filtrar por tipo */}
@@ -114,13 +115,6 @@ const HomePage = () => {
                     {tipo.name}
                   </option>
                 ))}
-            </select>
-  
-            {/* Selección de ordenar por ataque */}
-            <select onChange={(event) => handleOrderByAttack(event)} className={styles.select}>
-             <option value="" className={styles.optiona} >All ATTACK</option>
-              <option value="Attack-ASC" className={styles.optiona}>Ascending attack</option>
-              <option value="Attack-DESC" className={styles.optiona}>Descending attack</option>
             </select>
   
             {/* Selección de filtrar por origen */}

@@ -82,12 +82,6 @@ export const loadPokemon = (name) => {
       payload: types
     }
   }
-  export const orderByAttack = (payload)=>{
-    return{
-      type: ORDER_ATTACK,
-      payload,
-    }
-  }
   
   export const orderByName = (payload)=>{
     return{

@@ -1,109 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Skranji&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Skranji&display=swap");
 
-.containcard{
-    margin-top: 80px;
-    height: 230px;
-    width: 230px;
-    display: flex;
-    flex-direction: column;
-    border: 3px rgb(255, 255, 255) solid;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
-    
-};
+.containcard {
+  margin-top: 80px;
+  margin-bottom: -40px;
+  height: 250px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid rgba(255, 0, 0, 0.664);
+  border-left: 4px solid rgba(0, 0, 0, 0.664);
+  border-right: 4px solid rgba(0, 0, 0, 0.664);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.664);
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+.containcard:hover{
+  border-top: 4px solid red;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  border-bottom: 4px solid white;
+}
 
+.imagepoke {
+  height: 200px;
+  width: 150px;
+  object-fit: contain;
+  margin-top: -12px;
+}
 
-.imagepoke{ 
-    height: 200px;
-    width: 150px;
-    object-fit: contain;
-};
-
-
-.tpes2{
+.tpes2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: -30px;
   
+}
+.tp{
+  display: inline-block;
 }
 
 .navlk {
-    margin-bottom: -20px;
+  margin-bottom: -20px;
 }
-.navlk:hover{
-    transform: scale(1.02);
+.navlk:hover {
+  transform: scale(1.2);
 }
-.nombrePoke{
-    font-family: 'Croissant One', cursive;
-    text-transform: uppercase;
-    margin-bottom: -2px;
-
+.nombrePoke {
+  font-family: "Croissant One", cursive;
+  text-transform: uppercase;
+  margin-bottom: -2px;
 }
 .bug {
-    background-color: #7f9a25ee;
-  }
-  
-  .dark {
-    background-color: #5a5d6bee;
-  }
-  
-  .dragon {
-    background-color: rgba(255, 166, 0, 0.938);
-  }
-  
-  .electric {
-    background-color: #f2c944ee;
-  }
-  
-  .fairy {
-    background-color: #ee93e4ee;
-  }
-  
-  .fight {
-    background-color: #d83e55ee;
-  }
-  
-  .fire {
-    background-color: #f7a04cee;
-  }
-  
-  .flying {
-    background-color: rgba(128, 128, 128, 0.932);
-  }
-  
-  .ghost {
-    background-color: #666dc3ee;
-  }
-  
-  .grass {
-    background-color: #5dbd5fee;
-  }
-  
-  .ground {
-    background-color: #d28153ee;
-  }
-  
-  .ice {
-    background-color: #7ed0c7ee;
-  }
-  
-  .normal {
-    background-color: #99999fee;
-  }
-  
-  .poison {
-    background-color: #b360caee;
-  }
-  
-  .psychic {
-    background-color: #f5618bee;
-  }
-  
-  .rock {
-    background-color: #b6a87cee;
-  }
-  
-  .steel {
-    background-color:  #5392a0ee;
-  }
-  
-  .water {
-    background-color: #519adcee;
-  }
+  background-color: #7f9a25ee;
+}
+
+.dark {
+  background-color: #5a5d6bee;
+}
+
+.dragon {
+  background-color: rgba(255, 166, 0, 0.938);
+}
+
+.electric {
+  background-color: #f2c944ee;
+}
+
+.fairy {
+  background-color: #ee93e4ee;
+}
+
+.fight {
+  background-color: #d83e55ee;
+}
+
+.fire {
+  background-color: #f7a04cee;
+}
+
+.flying {
+  background-color: rgba(128, 128, 128, 0.932);
+}
+
+.ghost {
+  background-color: #666dc3ee;
+}
+
+.grass {
+  background-color: #5dbd5fee;
+}
+
+.ground {
+  background-color: #d28153ee;
+}
+
+.ice {
+  background-color: #7ed0c7ee;
+}
+
+.normal {
+  background-color: #99999fee;
+}
+
+.poison {
+  background-color: #b360caee;
+}
+
+.psychic {
+  background-color: #f5618bee;
+}
+
+.rock {
+  background-color: #b6a87cee;
+}
+
+.steel {
+  background-color: #5392a0ee;
+}
+
+.water {
+  background-color: #519adcee;
+}

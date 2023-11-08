@@ -21,7 +21,7 @@ const LandingPage = () => {
         </button>
         </NavLink>
         <div className={`${styles.authorContainer} ${styles.slideInUp}`}>
-            <h3>Made with ❤ by <a href="https://www.linkedin.com/in/roc%C3%ADo-baroni-3b4650281/" target="_blank" rel="noreferrer" className={styles.link}>Pilar Baroni</a></h3>
+            <h3>Made with ❤ by <a href="https://www.linkedin.com/in/pilar-baroni-3b4650281/" target="_blank" rel="noreferrer" className={styles.link}>Pilar Baroni</a></h3>
         </div>
     </div>
 );

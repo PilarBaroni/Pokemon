@@ -11,19 +11,29 @@
 
 .buttonul{
     font-family: 'Dela Gothic One', cursive;
-    background: linear-gradient(315deg, orange 20%, #0a5799 74%);
-    transform: scale(1.2);
-    border: 1px #0a5799 solid;
-    border-radius: 5px;
+    background-image: url(../../Imagenes/fondoboton.png);
+    background-color: yellow;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(2);
+    border-radius: 100%;
     margin-left: 5px;
     margin-right: 5px;
-    color: rgb(32, 32, 32);
+    color: orange;
     height: 31px;
     width: 31px;
+    text-shadow: 1px 1px 0px rgba(0,0,0,1);
+    margin-top: 100px;
+    border: 0.5px #c12025ad solid;
 }
 .buttonul:hover{
-    background: linear-gradient(315deg,#0a5799 20%, orange 74% );
-    transform: scale(1.3);
+    transform: scale(2.2);
     cursor: pointer;
-    color: black;
+    color: yellow;
+    border: 0.5px white solid;
+}
+.list{
+    display: flex;
+    gap: 28px;
 }

@@ -1,190 +1,188 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background-color: #a79e9e;
-  }
-  
-  .backButtonContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    margin: 0.5em;
-    position: absolute;
-    top: 3vw;
-    left: 3vw;
-  }
-  
-  .backButtonContainer button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    color: white;
-    background: orange;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease-in-out;
-    margin: 0 0.25rem;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-  .backButtonContainer:hover{
-    transform: scale(1.1);
-  }
-  .navlink{
-    text-decoration: none;
-  }
-  
-  .imageContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 300px;
-    min-width: 250px;
-  }
-  
-  .imageContainer img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .infoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-  }
-  
-  .infoContainer h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-top: -10px;
-  }
-  
-  .infoContainer h2 {
-    font-size: 5rem;
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .infoContainer p {
-    font-size: 1.75em;
-  }
-  
-  .typesContainer {
-    display: flex;
-    align-items: space-between;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    margin-top: 0.5em;
-    padding: 0.5em;
-  }
-  
-  .typeDisplay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    padding: 0.5em;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    color: #fff;
-    margin: 0 0.25em;
-  }
-  
-  .typeName p {
-    font-size: 14px;
-    font-weight: normal;
-  }
-  
-  .typeName h3 {
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-  
-  
-  .bug {
-    background-color: #7e9a25;
-  }
-  
-  .dark {
-    background-color: #5a5d6b;
-  }
-  
-  .dragon {
-    background-color: orange;
-  }
-  
-  .electric {
-    background-color: #f2c944;
-  }
-  
-  .fairy {
-    background-color: #ee93e4;
-  }
-  
-  .fight {
-    background-color: #d83e55;
-  }
-  
-  .fire {
-    background-color: #f7a04c;
-  }
-  
-  .flying {
-    background-color: gray;
-  }
-  
-  .ghost {
-    background-color: #666dc3;
-  }
-  
-  .grass {
-    background-color: #5dbd5f;
-  }
-  
-  .ground {
-    background-color: #d28153;
-  }
-  
-  .ice {
-    background-color: #7ed0c7;
-  }
-  
-  .normal {
-    background-color: #99999f;
-  }
-  
-  .poison {
-    background-color: #b360ca;
-  }
-  
-  .psychic {
-    background-color: #f5618b;
-  }
-  
-  .rock {
-    background-color: #b6a87c;
-  }
-  
-  .steel {
-    background-color:  #5392a0;
-  }
-  
-  .water {
-    background-color: #519adc;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #a79e9e;
+}
+
+.backButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0.5em;
+  position: absolute;
+  top: 3vw;
+  left: 3vw;
+}
+
+.backButtonContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  background: orange;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  margin: 0 0.25rem;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.backButtonContainer:hover {
+  transform: scale(1.1);
+}
+.navlink {
+  text-decoration: none;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  min-width: 250px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.infoContainer h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+
+.infoContainer h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.infoContainer p {
+  font-size: 1.75em;
+}
+
+.typesContainer {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
+
+.typeDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  margin: 0 0.25em;
+}
+
+.typeName p {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.typeName h3 {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bug {
+  background-color: #7e9a25;
+}
+
+.dark {
+  background-color: #5a5d6b;
+}
+
+.dragon {
+  background-color: orange;
+}
+
+.electric {
+  background-color: #f2c944;
+}
+
+.fairy {
+  background-color: #ee93e4;
+}
+
+.fight {
+  background-color: #d83e55;
+}
+
+.fire {
+  background-color: #f7a04c;
+}
+
+.flying {
+  background-color: gray;
+}
+
+.ghost {
+  background-color: #666dc3;
+}
+
+.grass {
+  background-color: #5dbd5f;
+}
+
+.ground {
+  background-color: #d28153;
+}
+
+.ice {
+  background-color: #7ed0c7;
+}
+
+.normal {
+  background-color: #99999f;
+}
+
+.poison {
+  background-color: #b360ca;
+}
+
+.psychic {
+  background-color: #f5618b;
+}
+
+.rock {
+  background-color: #b6a87c;
+}
+
+.steel {
+  background-color: #5392a0;
+}
+
+.water {
+  background-color: #519adc;
+}

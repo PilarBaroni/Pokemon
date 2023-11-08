@@ -4,7 +4,7 @@ const{Pokemon,Type}= require ("../db");
 
 const getPokemons = async (req, res) => { 
   try { 
-    const { data } = await axios.get(`${URL}?offset=00&limit=12`); // Obtención de datos de la API de Pokémon y limitación a 10 Pokémon
+    const { data } = await axios.get(`${URL}?offset=00&limit=96`); // Obtención de datos de la API de Pokémon y limitación a 10 Pokémon
 
     const pokemonList = data.results; // Extracción de la lista de Pokémon de los datos obtenidos de la API
     
